@@ -136,10 +136,5 @@ public class RegistrationPage {
         return this;
     }
 
-    public RegistrationPage checkDataFormIncorrect() {
-        getButtonDataFormOpen.click();
-        getButtonDataFormClose.shouldNotBe(visible);
-        return this;
-    }
 
 }
