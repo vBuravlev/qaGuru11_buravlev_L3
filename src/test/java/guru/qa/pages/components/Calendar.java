@@ -11,11 +11,15 @@ public class Calendar {
     private SelenideElement monthSelect = $(".react-datepicker__month-select");
     private SelenideElement yearSelect = $(".react-datepicker__year-select");
 
-    public Calendar setDate (String day, String month, String year) {
+    public Calendar setDate(String day, String month, String year) {
         calendarSelect.click();
         monthSelect.selectOption(month);
         yearSelect.selectOption(year);
-        $(".react-datepicker__day--0" + day).click();
+        sd(day).click();
         return this;
+    }
+
+    public SelenideElement sd(String day) {
+        return $(".react-datepicker__day--0" + day);
     }
 }
