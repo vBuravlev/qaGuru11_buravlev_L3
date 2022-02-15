@@ -18,8 +18,8 @@ public class TestData {
     public static String lastName = faker.name().lastName();
     public static String currentAddress = faker.rickAndMorty().quote();
     public static String userNumber = faker.phoneNumber().subscriberNumber(10);
-    static Date datePast = new Date(01, 00,01);
-    static Date dateFuture = new Date(200, 11,31);
+    static Date datePast = new Date(01, 00, 01);
+    static Date dateFuture = new Date(200, 11, 31);
     static Date newDate = faker.date().between(datePast, dateFuture);
     static SimpleDateFormat formatterMonth = new SimpleDateFormat("LLLL", Locale.ENGLISH);
     public static String calendarMonth = formatterMonth.format(newDate);
